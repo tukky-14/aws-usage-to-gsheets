@@ -6,12 +6,13 @@
 const AWS = require('aws-sdk');
 const ce = new AWS.CostExplorer({ region: 'us-east-1' });
 const { GoogleSpreadsheet } = require('google-spreadsheet');
+const { month, monthStart, today } = require('./date.js');
 
 exports.handler = async (event, context) => {
     const params = {
         TimePeriod: {
-            Start: '2023-02-01',
-            End: '2023-02-28',
+            Start: monthStart,
+            End: today,
         },
         // Granularity: 'DAILY',
         Granularity: 'MONTHLY',
@@ -63,11 +64,14 @@ const writeCostDataToSheet = async (costDataArray) => {
 
         // シートが存在しない場合は作成する
         let sheet;
-        const sheetExists = doc.sheetsByTitle['202201'] !== undefined;
+        const sheetExists = doc.sheetsByTitle[month] !== undefined;
         if (sheetExists) {
-            sheet = doc.sheetsByTitle['202201'];
+            sheet = doc.sheetsByTitle[month];
         } else {
-            sheet = await doc.addSheet({ title: '202201', headerValues: ['AWS Service', 'Monthly Cost'] });
+            sheet = await doc.addSheet({
+                title: month,
+                headerValues: ['AWS Service', 'Monthly Cost'],
+            });
         }
         await sheet.loadCells();
 
