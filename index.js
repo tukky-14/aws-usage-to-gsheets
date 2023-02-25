@@ -8,12 +8,11 @@ const { writeMonthlyCostDataToSheet } = require('./lib/sheet.js');
 
 exports.handler = async (event, context) => {
     // 料金の取得方法
-    const params = {
+    const monthlyParams = {
         TimePeriod: {
             Start: monthStart,
             End: today,
         },
-        // Granularity: 'DAILY',
         Granularity: 'MONTHLY',
         GroupBy: [
             {
@@ -23,11 +22,14 @@ exports.handler = async (event, context) => {
         ],
         Metrics: ['UnblendedCost'],
     };
+    const dateParams = { ...monthlyParams, Granularity: 'DAILY' };
 
     try {
-        const results = await ce.getCostAndUsage(params).promise();
+        const monthlyResults = await ce.getCostAndUsage(monthlyParams).promise();
+        const dailyResults = await ce.getCostAndUsage(dateParams).promise();
+        const results = [...monthlyResults.ResultsByTime, ...dailyResults.ResultsByTime];
         // スプレッドシートに書き込むために整形
-        const costDataArray = results.ResultsByTime.map((result) => {
+        const costDataArray = results.map((result) => {
             return {
                 timePeriod: result.TimePeriod.Start,
                 Groups: result.Groups.map((group) => {
@@ -38,7 +40,8 @@ exports.handler = async (event, context) => {
                 }),
             };
         });
-        console.log(costDataArray);
+
+        console.log(JSON.stringify(costDataArray));
 
         const response = await writeMonthlyCostDataToSheet(costDataArray);
         return response;

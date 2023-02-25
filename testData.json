@@ -1,0 +1,154 @@
+[
+    {
+        "service": "AWS CloudTrail",
+        "monthlyCost": "0",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "AWS Cost Explorer",
+        "monthlyCost": "0.12",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "AWS Glue",
+        "monthlyCost": "0",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "AWS Key Management Service",
+        "monthlyCost": "0.8467261688",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0.0357142848" },
+            { "date": "2023-02-02", "cost": "0.0357142848" }
+        ]
+    },
+    {
+        "service": "AWS Lambda",
+        "monthlyCost": "0.0000031326",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "AWS Secrets Manager",
+        "monthlyCost": "0",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "Amazon API Gateway",
+        "monthlyCost": "0.000544",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0.00001275" },
+            { "date": "2023-02-02", "cost": "0.00002125" }
+        ]
+    },
+    {
+        "service": "Amazon CloudFront",
+        "monthlyCost": "0.0000001002",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "Amazon Cognito",
+        "monthlyCost": "0",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "Amazon DynamoDB",
+        "monthlyCost": "0.0000049875",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0.0000004275" },
+            { "date": "2023-02-02", "cost": "0.0000004275" }
+        ]
+    },
+    {
+        "service": "Amazon GuardDuty",
+        "monthlyCost": "0.01569728",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0.0003304" },
+            { "date": "2023-02-02", "cost": "0.00033984" }
+        ]
+    },
+    {
+        "service": "Amazon Lightsail",
+        "monthlyCost": "3.8777803831",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0.1676074632" },
+            { "date": "2023-02-02", "cost": "0.1676608326" }
+        ]
+    },
+    {
+        "service": "Amazon Route 53",
+        "monthlyCost": "1.0014364",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "1.0000688" },
+            { "date": "2023-02-02", "cost": "0.0000516" }
+        ]
+    },
+    {
+        "service": "Amazon Simple Notification Service",
+        "monthlyCost": "0",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "Amazon Simple Queue Service",
+        "monthlyCost": "0",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "Amazon Simple Storage Service",
+        "monthlyCost": "0.0082113437",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0.0003473795" },
+            { "date": "2023-02-02", "cost": "0.0003754993" }
+        ]
+    },
+    {
+        "service": "AmazonCloudWatch",
+        "monthlyCost": "0",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "CloudWatch Events",
+        "monthlyCost": "0",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    },
+    {
+        "service": "Tax",
+        "monthlyCost": "0.59",
+        "dailyCost": [
+            { "date": "2023-02-01", "cost": "0.59" },
+            { "date": "2023-02-02", "cost": "0" }
+        ]
+    }
+]
