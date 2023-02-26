@@ -14,10 +14,11 @@
 
 ## 前提条件
 
+-   AWS 上で CostExpolorer が有効になっていること
 -   使用する PC に Node.js がインストールされていること
 -   GCP で Google Sheets API と Google Drive API が有効化されていること
 -   GCP で Google スプレッドシートにアクセスするためのサービスアカウントが作成されていること
--   書き込むための Google スプレッドシートが作成されていて、共有設定に上記のサービスアカウントが追加されていること
+-   書き込むための Google スプレッドシートが作成済で、共有設定に上記のサービスアカウントが追加されていること
 
 <br/>
 <br/>
@@ -77,8 +78,8 @@
     - 環境変数（事前に作成した GCP のサービスアカウントの鍵情報）
         - GOOGLE_SHEET_ID
             - Google スプレッドシートの URL に表示される不規則な文字列
-              <!-- ![AWS料金のスプレッドシートのID画像](img/sheetid.png) -->
-              <img src="img/sheetid.png" width="600px">
+                  <!-- ![AWS料金のスプレッドシートのID画像](img/sheetid.png) -->
+                  <img src="img/sheetid.png" width="600px">
         - GOOGLE_SHEET_CLIENT_EMAIL
             - GCP のサービスアカウントの鍵情報
         - GOOGLE_SHEET_PRIVATE_KEY
