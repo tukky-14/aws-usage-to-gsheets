@@ -25,9 +25,11 @@ exports.handler = async (event, context) => {
     const dateParams = { ...monthlyParams, Granularity: 'DAILY' };
 
     try {
+        // AWSの料金を取得
         const monthlyResults = await ce.getCostAndUsage(monthlyParams).promise();
         const dailyResults = await ce.getCostAndUsage(dateParams).promise();
         const results = [...monthlyResults.ResultsByTime, ...dailyResults.ResultsByTime];
+
         // スプレッドシートに書き込むために整形
         const costDataArray = results.map((result) => {
             return {
